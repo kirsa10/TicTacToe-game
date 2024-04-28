@@ -1,0 +1,115 @@
+.container {
+    text-align: center;
+  }
+  
+  @keyframes moveUpDown {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px); /* Adjust the distance the text moves up */
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .title {
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: whitesmoke; /* Adjust color as needed */
+    font-family: "Arial", sans-serif; /* Adjust font family as needed */
+    animation: moveUpDown 2s infinite; /* Make the text move up and down */
+  }
+  
+  .title span {
+    color: aquamarine;
+    padding-left: 15px;
+  }
+  
+  .reset {
+    width: 200px;
+    height: 90px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50px;
+    background: #2d3b42;
+    font-size: 26px;
+    color: aquamarine;
+    margin-top: 25px;
+    margin-bottom: 50px;
+  }
+  
+  .boxes {
+    position: relative; /* Ensure proper positioning of the image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 150px;
+    background: #2d3b42;
+    border: 4px solid aquamarine;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .boxes:hover {
+    transform: scale(1.1); /* Zoom in by 10% */
+  }
+  
+  .board {
+    height: 500px;
+    width: 464px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns */
+    grid-template-rows: repeat(3, 1fr); /* Adjust the number of rows */
+    gap: 10px; /* Adjust the gap between each row */
+    column-gap: 10px; /* Adjust the gap between each column */
+    margin: auto;
+  }
+  
+  .boxes img {
+    max-width: 110%; /* Adjust the image size */
+    max-height: 100%;
+  }
+ 
+  /* Add this CSS for fireworks animation */
+@keyframes fireworks {
+    0% { transform: translateY(0) rotate(0); }
+    100% { transform: translateY(-200px) rotate(360deg); }
+  }
+  
+  .fireworks {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(45deg, #ff0000, #ff9900, #ffff00, #33cc33, #3366ff, #9933cc);
+    border-radius: 50%;
+    animation: fireworks 1s ease-out;
+  }
+   
+  
+  /* Add more colors to the fireworks */
+  .fireworks:nth-child(2) {
+    background-color: #ff0; /* Yellow fireworks */
+  }
+  
+  .fireworks:nth-child(3) {
+    background-color: #0f0; /* Green fireworks */
+  }
+  
+  .fireworks:nth-child(4) {
+    background-color: #00f; /* Blue fireworks */
+  }
+  
+  .fireworks:nth-child(5) {
+    background-color: #ff00ff; /* Magenta fireworks */
+  }
+  
+  .fireworks:nth-child(6) {
+    background-color: #ffa500; /* Orange fireworks */
+  }
+  
+ 
